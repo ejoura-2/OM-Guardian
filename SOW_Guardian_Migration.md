@@ -379,7 +379,7 @@ iv. Provider will remediate validated non-conformance and resubmit for acceptanc
 
 ## 6. Project Timeline and Approach
 
-The parties intend to commence discovery activities in parallel with contracting and onboarding, recognizing that schedule and throughput are dependent on timely access provisioning and Client prioritization decisions. The timeline below is an operational plan and is not a guaranteed schedule unless expressly stated as a contractual milestone in a mutually executed change order.
+The parties intend to commence discovery activities in Week 1 (the week of January 26, 2026), in parallel with contracting and onboarding, recognizing that schedule and throughput are dependent on timely access provisioning and Client prioritization decisions. The timeline below is an operational plan and is not a guaranteed schedule unless expressly stated as a contractual milestone in a mutually executed change order.
 
 **Target Completion:** June 30, 2026
 
@@ -387,25 +387,25 @@ The parties intend to commence discovery activities in parallel with contracting
 
 | Phase | Activities | Duration | Key Deliverables |
 | :--- | :--- | :--- | :--- |
-| **Phase 1: Discovery & Assessment** | Access/onboarding, object cataloging, pipeline inventory, function audit, security assessment, UI audit, risk assessment, migration planning | Weeks 1-2 | D1: Migration Assessment & Technical Plan |
-| **Phase 2: Architecture & Design** | Security model design, ontology merge strategy, pipeline architecture, detailed workplan | Week 3 | D2: Architecture Design Document |
-| **Phase 3: Backend Implementation** | Security implementation, ontology migration, function consolidation, pipeline refactoring, data validation | Weeks 4-6 | D3: Unified Ontology, D4: Security Configuration, D5: Consolidated Pipelines |
-| **Phase 4: Frontend Implementation** | Workshop recreation, feature parity, internal testing | Weeks 7-8 | D6: Guardian Application (Beacon Space) |
-| **Phase 5: Validation & UAT** | Parallel run, UAT, security validation, performance validation, defect remediation | Weeks 8-9 | D7: Parallel Run Validation Report |
-| **Phase 6: Cutover & Transition** | Cutover planning, user transition, hypercare, decommissioning preparation | Week 10 | D8: Cutover Runbook; D9: Decommissioning Recommendation |
-| **Phase 7: Handover & Closure** | Documentation finalization, knowledge transfer, cost savings validation, project closure | Week 10+ | D10, D11, D12: Docs, KT, Cost Report |
+| **Phase 1: Discovery & Assessment** | Access/onboarding, object cataloging, pipeline inventory, function audit, security assessment, UI audit, risk assessment, migration planning | Weeks 1-3 | D1: Migration Assessment & Technical Plan |
+| **Phase 2: Architecture & Design** | Security model design, ontology merge strategy, pipeline architecture, detailed workplan | Weeks 4-5 | D2: Architecture Design Document |
+| **Phase 3: Backend Implementation** | Security implementation, ontology migration, function consolidation, pipeline refactoring, data validation | Weeks 6-14 | D3: Unified Ontology, D4: Security Configuration, D5: Consolidated Pipelines |
+| **Phase 4: Frontend Implementation** | Workshop recreation, feature parity, internal testing | Weeks 15-17 | D6: Guardian Application (Beacon Space) |
+| **Phase 5: Validation & UAT** | Parallel run, UAT, security validation, performance validation, defect remediation | Weeks 18-20 | D7: Parallel Run Validation Report |
+| **Phase 6: Cutover & Transition** | Cutover planning, user transition, hypercare, decommissioning preparation | Week 21 | D8: Cutover Runbook; D9: Decommissioning Recommendation |
+| **Phase 7: Handover & Closure** | Documentation finalization, knowledge transfer, cost savings validation, project closure | Week 22 | D10, D11, D12: Docs, KT, Cost Report |
 
 ### 6.2 Key Milestones
 
 | Milestone | Target | Gate Criteria |
 | :--- | :--- | :--- |
-| **M1: Discovery Complete** | End of Week 2 | Migration Assessment approved by Client |
-| **M2: Architecture Approved** | End of Week 3 | Architecture Design approved; green light to implement |
-| **M3: Backend Complete** | End of Week 6 | Unified ontology validated; pipelines operational |
-| **M4: UI Complete** | End of Week 8 | Guardian Workshop feature-complete in Beacon |
-| **M5: UAT Complete** | End of Week 9 | Parallel Run validated; Client sign-off on UAT |
-| **M6: Go-Live** | Week 10 | Users transitioned; hypercare active |
-| **M7: Project Closure** | Week 10+ | All deliverables accepted; handover complete |
+| **M1: Discovery Complete** | End of Week 3 | Migration Assessment approved by Client |
+| **M2: Architecture Approved** | End of Week 5 | Architecture Design approved; green light to implement |
+| **M3: Backend Complete** | End of Week 14 | Unified ontology validated; pipelines operational |
+| **M4: UI Complete** | End of Week 17 | Guardian Workshop feature-complete in Beacon |
+| **M5: UAT Complete** | End of Week 20 | Parallel Run validated; Client sign-off on UAT |
+| **M6: Go-Live** | Week 21 | Users transitioned; hypercare active |
+| **M7: Project Closure** | Week 22 | All deliverables accepted; handover complete |
 
 *Note: Cutover activities may be scheduled during low-usage periods (e.g., weekends) to minimize business disruption, subject to Client coordination.*
 
