@@ -52,7 +52,7 @@ v. decommissioning of redundant Guardian-specific artifacts to realize cost savi
 
 ## 3. Scope of Services
 
-Provider shall perform the following services (the "Services") in close coordination with Client stakeholders. This section details the methodology and specific activities to be performed.
+Provider shall perform the following services (the "Services") in close coordination with Client stakeholders. This section describes scope at a high level.
 
 ### 3.1 Discovery & Technical Assessment
 
@@ -243,7 +243,7 @@ Provider will facilitate formal validation including parallel run and user accep
 - Document security test results
 
 **3.5.4 Performance Validation**
-- Validate Workshop response times meet acceptable thresholds
+- Validate Workshop response times against Client-approved performance criteria
 - Validate pipeline run times and compare to legacy
 - Document performance metrics and improvements
 
@@ -274,7 +274,7 @@ Provider will support the transition of users to the new environment.
 - Provide rapid response to cutover-related incidents
 
 **3.6.3 Hypercare Support**
-- Provide post-cutover hypercare support for [__] business days
+- Provide post-cutover hypercare support for a mutually agreed number of business days (to be confirmed during cutover planning)
 - Prioritize and remediate post-go-live defects
 - Track issues through JIRA with agreed SLAs
 
@@ -286,8 +286,9 @@ Provider will support the transition of users to the new environment.
   - Unused repositories
 - Estimate cost savings from decommissioning
 - Present Decommissioning Recommendation for Client approval
+- Disable/archive approved legacy artifacts in Carbon (no permanent deletion)
 
-**Deliverable:** Successful Cutover + Decommissioning Recommendation
+**Deliverable:** Successful Cutover + Cutover Runbook + Decommissioning Recommendation
 
 ---
 
@@ -339,7 +340,7 @@ Unless expressly agreed in a written change order executed in accordance with th
 - Support for systems, applications, or environments not explicitly made available by Client for the Guardian migration scope of this SOW.
 - Production support outside agreed working hours and the agreed hypercare window, or 24x7 on-call coverage.
 - Security certification, penetration testing, or compliance audits (except reasonable engineering support within scope for permissions implementation).
-- Execution of decommissioning (Provider will recommend; Client approves and executes retirement of legacy artifacts).
+- Permanent deletion of legacy artifacts (Provider will disable/archive approved artifacts; Client approves and executes permanent deletion).
 
 ---
 
@@ -356,10 +357,11 @@ Unless expressly agreed in a written change order executed in accordance with th
 | D5 | **Consolidated Pipelines** | Migrated and optimized pipelines with Snowflake push-down; pipeline documentation. | Pipeline outputs validated against legacy; documentation accepted by Client. | Foundry Pipelines + Docs |
 | D6 | **Guardian Application (Beacon Space)** | Recreated Workshop modules (Item Health, DC Item Health) with full feature parity. | Feature parity verification by Client SMEs; JIRA ticket acceptance. | Foundry Workshop |
 | D7 | **Parallel Run Validation Report** | Data comparison results between legacy Guardian (Carbon) and new Beacon implementation. | Client sign-off confirming data accuracy and functional equivalence. | Document + JIRA |
-| D8 | **Decommissioning Recommendation** | List of legacy artifacts for retirement with estimated cost savings. | Client review and acknowledgment prior to decommissioning execution. | Document / Memo |
-| D9 | **Documentation Package** | Technical documentation, operations runbook, known issues log. | Documentation reviewed and accepted by Client technical team. | Repository / Confluence |
-| D10 | **Knowledge Transfer** | Training sessions with Client technical team; handover complete. | Client acknowledgment of knowledge transfer completion. | Sessions + Materials |
-| D11 | **Cost Savings Report** | Documented compute and storage cost reduction achieved. | Client acknowledgment of savings metrics. | Document |
+| D8 | **Cutover Runbook** | Step-by-step cutover plan, communications, and rollback procedures. | Client approval prior to cutover execution. | Document |
+| D9 | **Decommissioning Recommendation** | List of legacy artifacts for retirement with estimated cost savings. | Client review and acknowledgment prior to decommissioning execution. | Document / Memo |
+| D10 | **Documentation Package** | Technical documentation, operations runbook, known issues log. | Documentation reviewed and accepted by Client technical team. | Repository / Confluence |
+| D11 | **Knowledge Transfer** | Training sessions with Client technical team; handover complete. | Client acknowledgment of knowledge transfer completion. | Sessions + Materials |
+| D12 | **Cost Savings Report** | Documented compute and storage cost reduction achieved. | Client acknowledgment of savings metrics. | Document |
 
 ### 5.2 Acceptance Process
 
@@ -390,58 +392,10 @@ The parties intend to commence discovery activities in parallel with contracting
 | **Phase 3: Backend Implementation** | Security implementation, ontology migration, function consolidation, pipeline refactoring, data validation | Weeks 4-6 | D3: Unified Ontology, D4: Security Configuration, D5: Consolidated Pipelines |
 | **Phase 4: Frontend Implementation** | Workshop recreation, feature parity, internal testing | Weeks 7-8 | D6: Guardian Application (Beacon Space) |
 | **Phase 5: Validation & UAT** | Parallel run, UAT, security validation, performance validation, defect remediation | Weeks 8-9 | D7: Parallel Run Validation Report |
-| **Phase 6: Cutover & Transition** | Cutover planning, user transition, hypercare, decommissioning preparation | Week 10 | D8: Decommissioning Recommendation |
-| **Phase 7: Handover & Closure** | Documentation finalization, knowledge transfer, cost savings validation, project closure | Week 10+ | D9, D10, D11: Docs, KT, Cost Report |
+| **Phase 6: Cutover & Transition** | Cutover planning, user transition, hypercare, decommissioning preparation | Week 10 | D8: Cutover Runbook; D9: Decommissioning Recommendation |
+| **Phase 7: Handover & Closure** | Documentation finalization, knowledge transfer, cost savings validation, project closure | Week 10+ | D10, D11, D12: Docs, KT, Cost Report |
 
-### 6.2 Detailed Phase Breakdown
-
-#### Phase 1 – Discovery & Assessment (Weeks 1-2)
-
-| Week | Activities | Outputs |
-| :--- | :--- | :--- |
-| Week 1 | Access provisioning; Stakeholder introductions; Begin ontology cataloging (Guardian); Begin pipeline inventory | Access confirmed; Initial inventory started |
-| Week 2 | Complete ontology cataloging (Guardian + Beacon comparison); Complete pipeline inventory; Function audit; Security assessment; UI audit; Risk assessment; Develop migration plan | D1: Migration Assessment & Technical Plan |
-
-#### Phase 2 – Architecture & Design (Week 3)
-
-| Week | Activities | Outputs |
-| :--- | :--- | :--- |
-| Week 3 | Security model design; Ontology merge strategy; Pipeline architecture design; Detailed workplan development; Client review & approval | D2: Architecture Design Document; Client approval to proceed |
-
-#### Phase 3 – Backend Implementation (Weeks 4-6)
-
-| Week | Activities | Outputs |
-| :--- | :--- | :--- |
-| Week 4 | Security implementation (OSPs, RLS, groups); Begin ontology migration | Security configured |
-| Week 5 | Continue ontology migration; Function consolidation; Begin pipeline refactoring | Ontology merged |
-| Week 6 | Complete pipeline migration; Data validation; Remediation | D3, D4, D5: Backend complete |
-
-#### Phase 4 – Frontend Implementation (Weeks 7-8)
-
-| Week | Activities | Outputs |
-| :--- | :--- | :--- |
-| Week 7 | Recreate Item Health Workshop; Recreate DC Item Health Workshop | Workshop modules created |
-| Week 8 | Feature parity implementation; Internal testing; Bug fixes | D6: Guardian Application (Beacon Space) |
-
-#### Phase 5 – Validation & UAT (Weeks 8-9)
-
-| Week | Activities | Outputs |
-| :--- | :--- | :--- |
-| Week 8-9 | Parallel run execution; UAT sessions with Client SMEs; Security validation; Performance validation; Defect remediation | D7: Parallel Run Validation Report; UAT Sign-off |
-
-#### Phase 6 – Cutover & Transition (Week 10)
-
-| Week | Activities | Outputs |
-| :--- | :--- | :--- |
-| Week 10 | Cutover planning & execution (recommend weekend); User transition (~200 users); Hypercare support; Prepare decommissioning list | Successful cutover; D8: Decommissioning Recommendation |
-
-#### Phase 7 – Handover & Closure (Week 10+)
-
-| Week | Activities | Outputs |
-| :--- | :--- | :--- |
-| Week 10+ | Documentation finalization; Knowledge transfer sessions; Cost savings report; Project retrospective; Formal closure | D9, D10, D11: Complete handover |
-
-### 6.3 Key Milestones
+### 6.2 Key Milestones
 
 | Milestone | Target | Gate Criteria |
 | :--- | :--- | :--- |
@@ -521,6 +475,7 @@ Services are performed under the governance of the MSA. Client procurement and l
 - Client Product Team providing UI/UX direction decision (standalone Workshop vs. Insight-integrated) prior to Phase 4 commencement.
 - Client prioritization decisions provided in a timely manner to support sprint planning and milestone gates.
 - Client availability for cutover window scheduling during low-usage period.
+- Required identity attribute for RLS (e.g., `account_id` or `health_system_id`) is available in Foundry/IdP and mapped to user profiles.
 
 ---
 
